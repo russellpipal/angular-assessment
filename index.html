@@ -14,7 +14,8 @@
     <br />
     <span ng-show="main.showPreviousLabel">Previous messages are:</span><br />
     <ul>
-      <li ng-repeat = "message in main.messages">
+      <!-- Tracking by $index to allow repeat entries -->
+      <li ng-repeat = "message in main.messages track by $index">
         {{ message }}
       </li>
     </ul>
